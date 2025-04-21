@@ -33,10 +33,9 @@ Example ``Node.js`` + ``Express`` server that provides a simple web interface fo
    ```
    http://localhost:3000
    ```
+   > Make sure Ollama is running locally at `http://127.0.0.1:11434` and the necessary model is pulled.
 
-> Make sure Ollama is running locally at `http://127.0.0.1:11434` and the necessary model is pulled.
-
-
+4. Change the `MODEL` variable in `index.mjs` to the desired model name. Ensure the model is available on your local Ollama server.
 
 ## 🔌 API Endpoints
 
