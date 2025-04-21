@@ -2,7 +2,6 @@
 
 Example ``Node.js`` + ``Express`` server that provides a simple web interface for interacting with [Ollama](https://ollama.com/), a local AI model runner. It exposes several endpoints to chat with different models, manage chat history, and retrieve available models from a running Ollama server instance.
 
----
 
 ## 📦 Prerequisites
 
@@ -44,7 +43,6 @@ Example ``Node.js`` + ``Express`` server that provides a simple web interface fo
 ### `GET /`
 Serves the main HTML page from `public/index.html`.
 
----
 
 ### `GET /models`
 Fetches and returns a list of available models from the local Ollama server.
@@ -56,7 +54,6 @@ Fetches and returns a list of available models from the local Ollama server.
 }
 ```
 
----
 
 ### `GET /user/:model/:msg`
 Sends a message to the specified model and returns a response using Ollama’s chat API.  
@@ -71,12 +68,10 @@ Maintains a session history in memory for contextual conversation.
 /user/llama2/What is the capital of France?
 ```
 
----
 
 ### `GET /history`
 Returns the current conversation history in JSON format.
 
----
 
 ### `GET /clear`
 Clears the in-memory conversation history.
@@ -101,8 +96,7 @@ project-root/
     - Authentication
     - Input validation
     - Security measures (e.g., rate limiting, sanitization, etc.)
----
 
-## 🧠 Related Links
+## Related Links
 
 - [Ollama Documentation](https://ollama.com/docs)
