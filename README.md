@@ -99,4 +99,4 @@ project-root/
 
 ## Related Links
 
-- [Ollama Documentation](https://ollama.com/docs)
+- [Ollama Documentation](https://ollama.com/)
