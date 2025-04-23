@@ -12,6 +12,15 @@ const loadModels = async () => {
     }
 }
 
+const loadSessionID = async () => {
+    try {
+        const res = await fetch('/sessionId');
+        document.getElementById('sessionID').textContent = await res.text();
+    } catch (err) {
+       document.getElementById('model-list').textContent =  `Error loading sessionID. ${err}`;
+    }
+}
+
 const append = (sender, text, className) => {
     const info = `<strong>${sender}:</strong> ${text}`;
     message(info, className);
@@ -29,8 +38,15 @@ const removeLoading = () => {
     document.querySelectorAll('.loading-feedback').forEach(item => item.remove());
 }
 
+window.addEventListener('beforeunload', async (event)  => {
+    event.preventDefault();
+    event.returnValue = true;
+    const destroy = await fetch('/destroy');
+});
+
 window.addEventListener('DOMContentLoaded', () => {
-    loadModels();
+    loadModels().then(r => loadSessionID());
+
     const div = document.createElement('p');
     div.innerHTML =  `We are using <strong>${MODEL}</strong> model.`;
     document.getElementById(`info`).appendChild(div);
