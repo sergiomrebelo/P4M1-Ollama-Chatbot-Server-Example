@@ -5,7 +5,7 @@ Example ``Node.js`` + ``Express`` server that provides a simple web interface fo
 
 ## 📦 Prerequisites
 
-- [Node.js](https://nodejs.org/) installed
+- [Node.js](https://nodejs.org/) installed (make sure that you have the latest Node version)
 - [Ollama](https://ollama.com/download) installed and running locally at `http://127.0.0.1:11434`
 - Ensure that the required models are pulled using:
   ```bash
