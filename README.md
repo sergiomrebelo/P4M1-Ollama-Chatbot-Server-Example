@@ -95,6 +95,10 @@ project-root/
     - Authentication
     - Input validation
     - Security measures (e.g., rate limiting, sanitization, etc.)
+- To remove a model from the server, use the command:
+  ```bash
+  ollama rm <model-name>
+  ```
 
 ## Related Links
 
